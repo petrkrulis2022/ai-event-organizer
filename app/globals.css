@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #fffdd0; /* Creamy background color */
   --foreground: #171717;
 }
 
@@ -15,9 +15,13 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background-color: var(--background);
+  font-family: "Arial", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .circle {
@@ -31,4 +35,22 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+h2 {
+  font-weight: bold;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  font-weight: bold;
+}
+
+button {
+  font-weight: bold;
 }
