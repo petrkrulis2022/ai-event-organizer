@@ -3,38 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --background: #fffdd0; /* Creamy background color */
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --g-blue: #141416;
+  --g-white: #ffffff;
+  --g-glossy-green: #00ff00; /* Glossy green */
+  --g-silver: #c0c0c0; /* Silver */
 }
 
 body {
-  color: #333;
-  background-color: var(--background);
+  color: var(--g-white);
+  background-color: var(--g-blue);
   font-family: "Arial", sans-serif;
   min-height: 100vh;
   margin: 0;
   display: flex;
   flex-direction: column;
-}
-
-.circle {
-  background-color: red;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
 
 h2 {
@@ -49,8 +31,26 @@ input,
 select,
 textarea {
   font-weight: bold;
+  border: 2px solid var(--g-glossy-green); /* Glossy green border */
+  color: var(--g-blue); /* Text color inside input */
 }
 
 button {
   font-weight: bold;
+  background-color: var(--g-glossy-green); /* Glossy green background color */
+  color: var(--g-blue); /* Blue text color */
+  padding: 0.5rem 1rem; /* Padding */
+  border-radius: 0.375rem; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:disabled {
+  background-color: var(
+    --g-silver
+  ); /* Silver background color for disabled buttons */
+  color: var(--g-blue); /* Blue text color */
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--g-glossy-green); /* Glossy green on hover */
 }
